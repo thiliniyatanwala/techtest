@@ -6,13 +6,14 @@ using TechTest01.Domain;
 using TechTest01.Domain.Catalog;
 
 namespace TechTest01.Repository
+ 
 {
     public interface IRepository<TEntity> where TEntity : BaseEntity
     {
         TEntity Get(int id);
         IEnumerable<TEntity> GetAll();
     }
-
+    // IRepository extends from IProductRepository
     public interface IProductRepository : IRepository<Product>
     {
        
