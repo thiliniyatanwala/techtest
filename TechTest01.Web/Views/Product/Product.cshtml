@@ -1,0 +1,40 @@
+﻿@model TechTest01.Domain.Catalog.Product
+
+@{
+    ViewBag.Title = "Product";
+}
+
+<h2>Product</h2>
+
+<table style="font-family:Arial;display:block;">
+    <tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            <img src=@Model.ImageUrl width="300" height="300" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Model.Name
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Model.Description
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Price</b>
+        </td>
+        <td>
+            @Model.Price
+        </td>
+    </tr>
+</table>
+
+@Html.ActionLink("Back to all Products", "Index");
+
+
