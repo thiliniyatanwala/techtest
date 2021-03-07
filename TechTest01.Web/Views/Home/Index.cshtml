@@ -1,53 +1,50 @@
 ﻿@model TechTest01.Domain.Catalog.Product
 
-@{
-    ViewBag.Title = "Home";
-}
+@{ ViewBag.Title = "Home"; }
 
 <h2>Home</h2>
 @Html.ActionLink("All Products", "Index", "Product");
 
 <div style="display:block;margin-top:40px">
 
-@foreach (TechTest01.Domain.Catalog.Product str in ViewBag.index)
-{
-    <table style="font-family:Arial;display:inline-block" border="1">
-        <tr>
-            <td>
-                <b>ProductID</b>
-            </td>
-            <td>
-                @str.Id
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <b>Product Name</b>
-            </td>
-            <td>
-                @str.Name
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <b>ProductPrice</b>
-            </td>
-            <td>
-                @str.Price
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <b>ProductImage</b>
-            </td>
-            <td>
+    @foreach (TechTest01.Domain.Catalog.Product str in ViewBag.index)
+    {
+<table style="font-family:Arial;display:inline-block" border="1">
+    <tr>
+        <td>
+            <b>ProductID</b>
+        </td>
+        <td>
+            @str.Id
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Product Name</b>
+        </td>
+        <td>
+            @str.Name
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>ProductPrice</b>
+        </td>
+        <td>
+            @str.Price
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>ProductImage</b>
+        </td>
+        <td>
 
-                <img src=@str.ImageUrl width="100" height="100" />
+            <img src=@str.ImageUrl width="100" height="100" />
 
-            </td>
-        </tr>
-    </table>
-}
+        </td>
+    </tr>
+</table>}
 </div>
 
 

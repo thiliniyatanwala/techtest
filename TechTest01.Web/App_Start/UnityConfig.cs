@@ -15,7 +15,7 @@ namespace TechTest01.Web
             // it is NOT necessary to register your controllers
 
             // e.g. container.RegisterType<ITestService, TestService>();
-            container.RegisterType<IProductService,ProductServices>();
+            container.RegisterSingleton<IProductService,ProductServices>();
             
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
             

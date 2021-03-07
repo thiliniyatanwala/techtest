@@ -25,11 +25,20 @@ namespace TechTest01.Web.Controllers
             ViewBag.all = product;
             return View();
         }
-
-        public ActionResult Product(int id)
+ 
+        public ActionResult Product(string id)
         {
-            Product product = _iservices.GetById(id);
-            return View(product);
+            int Rid=0;
+            ICollection<Product> product = _iservices.GetProducts();
+            foreach(Product single in product)
+            {
+                if (single.Slug == id)
+                    Rid = single.Id;
+            }
+
+            Product products = _iservices.GetById(Rid);
+
+            return View(products);
         }
     }
 }

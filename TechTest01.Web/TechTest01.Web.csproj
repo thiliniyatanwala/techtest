@@ -106,10 +106,10 @@
   <ItemGroup>
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
-    <Content Include="Images\green-scarf.jpg" />
-    <Content Include="Images\red-t-shirt.jpg" />
-    <Content Include="Images\yello-t-shirt.jpg" />
-    <Content Include="Images\yellow-cap.jpg" />
+    <Content Include="Images\green-scarf.png" />
+    <Content Include="Images\red-t-shirt.png" />
+    <Content Include="Images\yello-t-shirt.png" />
+    <Content Include="Images\yellow-cap.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +140,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TechTest01.Domain\TechTest01.Domain.csproj">

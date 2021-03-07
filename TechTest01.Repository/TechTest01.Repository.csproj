@@ -82,7 +82,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Contextdb.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Migrations\202102270645264_productdb.cs" />

@@ -1,7 +1,5 @@
 ﻿
-@{
-    ViewBag.Title = "Index";
-}
+@{ ViewBag.Title = "Index"; }
 @using TechTest01.Domain.Catalog;
 
 <h2>Products List</h2>
@@ -10,25 +8,24 @@
     @foreach (Product str in ViewBag.all)
     {
 
-        <li>
-            <table>
-                <tr>
-                    <td>
-                        @Html.ActionLink(str.Name, "Product", new { id = str.Id });
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src=@str.ImageUrl width="100" height="100" />
-                        
-                    </td>
-                </tr>
-            </table>
-        </li>
-    }
+<li>
+    <table>
+        <tr>
+            <td>
+                @Html.ActionLink(str.Name, "Product", new { id = str.Slug });
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src=@str.ImageUrl width="100" height="100" />
+
+            </td>
+        </tr>
+    </table>
+</li>}
 </ol>
 
-@Html.ActionLink("Back to Home", "Index","Home");
+@Html.ActionLink("Back to Home", "Index", "Home");
 
 
 

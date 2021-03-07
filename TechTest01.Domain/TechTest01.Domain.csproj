@@ -82,7 +82,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="BaseEntity.cs" />
     <Compile Include="Catalog\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
