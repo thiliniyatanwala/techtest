@@ -2,37 +2,25 @@
 
 @{ ViewBag.Title = "Product"; }
 
-<h2>Product</h2>
+<h1 class="display-1" style="margin-bottom:20px">@Model.Name</h1>
 
-<table style="font-family:Arial;display:block;">
-    <tr>
-    <tr>
-        <td>
-        </td>
-        <td>
-            <img src=@Model.ImageUrl width="300" height="300" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            @Model.Name
-        </td>
-    </tr>
-    <tr>
-        <td>
-            @Model.Description
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <b>Price</b>
-        </td>
-        <td>
-            @Model.Price
-        </td>
-    </tr>
-</table>
+<div class="container" style="display:flex;justify-content:center">
+    <div class="container-fluid">
+        <div class="row" style="text-align:center;margin:5%">
+            <div class="col-lg-12">
+                <img class="img-fluid" src=@Model.ImageUrl style="width:auto;height:40vh;object-fit:contain;border:solid" />
+            </div>
+            <div class="col-lg-12">
+                <p style="margin-top:5%;text-align:justify;font-size:1.5vw">@Model.Description</p>
+            </div>
+            <div class="col-lg-12" style="text-align:end">
+                <h2 style="font-size:2vw">Price : AUD.@Model.Price</h2>
+            </div>
+        </div>
+    </div>
+</div>
 
-@Html.ActionLink("Back to all Products", "Index");
 
+
+<button style="align-content:center" type="button" onclick="location.href='@Url.Action("Index", "Product")'">Back to all Products</button>
 
